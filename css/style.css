@@ -8,6 +8,7 @@ body {
   font-family: "Roboto", sans-serif;
   width: 100%;
   margin: 0 5px;
+  overflow-x: hidden;
 }
 main {
   max-width: 940px;
@@ -179,9 +180,10 @@ main {
   position: relative;
   background-color: white;
   max-width: 660px;
-  width: 100%;
+  width: 90%;
   top: 30%;
-  height: 413px;
+  min-height: 413px;
+  height: 45vh;
   margin: 1vh auto;
   padding: 30px;
   border-radius: 16px;
@@ -220,9 +222,6 @@ main {
 }
 /* responsividade */
 @media (max-width: 720px) {
-  body {
-    overflow-x: hidden;
-  }
   .mais-acessadas .mais-acessadas-grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -237,6 +236,11 @@ main {
 @media (max-width: 500px) {
   .mais-acessadas .mais-acessadas-grid {
     grid-template-columns: 1fr;
+  }
+}
+@media (max-height: 700px) {
+  .modal-receita {
+    top: 10%;
   }
 }
 @media (max-width: 320px) {
