@@ -237,13 +237,27 @@ main {
   .mais-acessadas .mais-acessadas-grid {
     grid-template-columns: 1fr;
   }
+  .banner-site {
+    width: 100%;
+    display: inline-block;
+    padding: 30px;
+  }
+  .banner-site .banner-imagem img {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+  }
+  .banner-site .banner-background {
+    text-align: center;
+    width: 90%;
+  }
 }
 @media (max-height: 700px) {
   .modal-receita {
     top: 10%;
   }
 }
-@media (max-width: 320px) {
+@media (max-width: 400px) {
   .nav-section {
     margin: 36px 0 30px 0;
     text-align: center;
@@ -251,12 +265,6 @@ main {
   .nav-section nav {
     gap: 50px;
   }
-  .banner-site .banner-imagem img {
-    width: 0;
-    height: 0;
-    visibility: hidden;
-  }
-
   .banner-site .banner-background h1 {
     margin-bottom: 5px;
     text-align: center;
