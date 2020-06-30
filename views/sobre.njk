@@ -1,0 +1,23 @@
+{% extends "layout.njk" %}
+{% block header%}
+  <title>Foodfy - Sobre</title>
+{% endblock %}
+{% block content %}
+  <section class="sobre">
+    {% for i in sobre %}
+      <div class="sobre-foodfy">
+
+        <h2>{{ i.sobreTitle}}</h2>
+
+        <p>
+          {{ i.sobreFoodfy1 }}
+        </p>
+
+        <p>
+          {{ i.sobreFoodfy2 }}</p>
+
+      </div>
+    {% endfor %}
+  </section>
+</main>
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends "layout.njk"%}
+
+{% block content %}
+  <section class="banner-site">
+    <div class="banner-background">
+      <h1>{{ home.title }}</h1>
+      <p>{{ home.content }}</p>
+    </div>
+    <div class="banner-imagem">
+      <img src="/assets/chef.png" alt="">
+    </div>
+  </section>
+
+  <section class="mais-acessadas">
+    <div class="titulo">
+      <h2>Mais acessadas</h2>
+    </div>
+    <div class="mais-acessadas-grid">
+      {% for item in itens %}
+        {% if loop.index0 < 6 %}
+          <div class="card" id="burger">
+            <div class="card-imagem">
+              <img src="{{ item.image }}" alt="imagem do {{ item.title }}">
+            </div>
+            <div class="card-content">
+              <h3 class="card-subtitulo">
+                {{ item.title }}</h3>
+              <p class="card-autor">{{ item.author }}</p>
+            </div>
+          </div>
+          {%endif%}
+        {% endfor %}
+      </div>
+    </section>
+
+  </main>
+
+{% endblock %}
